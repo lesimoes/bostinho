@@ -1,4 +1,4 @@
-## Bostinho (Seu bot amiguinho)
+## :poop: Bostinho (Seu bot amiguinho)
 
 ![bostinho pic](https://media.giphy.com/media/l0MYSMV95h0NY6L1m/giphy.gif)
 
@@ -38,3 +38,8 @@ node index.js
 
 Mais detalhes e uma implementação em PHP estão na miha dissertação: https://www.researchgate.net/publication/323688070_MMRecommender_Arquitetura_Aberta_para_Sistemas_de_Recomendacao
 
+
+
+
+
+Feito com muito :heart:, :coffee: e :beer: por **lesimoes**.
