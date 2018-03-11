@@ -1,0 +1,11 @@
+{
+  "name": "bostinho",
+  "version": "1.0.0",
+  "description": "a simple api for chatbots",
+  "main": "index.js",
+  "scripts": {
+    "test": "tests"
+  },
+  "author": "lesimoes",
+  "license": "MIT"
+}
