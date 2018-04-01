@@ -1,10 +1,11 @@
 const TELEGRAM_TOKEN = require('./_tokens.js').telegram;
 const Slimbot = require('slimbot');
 const slimbot = new Slimbot(TELEGRAM_TOKEN);
-var bot = require('./nlp/n-grams/ngrams')
+const telegram = require('./channels/telegram');
+
 
 slimbot.on('message', message => {
-  var response = bot(message.text);
+  var response = telegram(message)
   slimbot.sendMessage(message.chat.id, response[0].response);
 });
 
