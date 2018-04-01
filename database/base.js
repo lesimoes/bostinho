@@ -1,8 +1,8 @@
 module.exports.base = [
   {
-  intentions: 'Comer Pizza',
-  phrase: ['Quero comer pizza', 'Quero pizza', 'Comer pizza', 'Onde eu posso comer uma pizza'],
-  response: ['Entendi que vc quer comer pizza, né @user_name', 'Pizza??', 'Isso é uma pizza?!',   ],
+  intentions: 'Preciso café',
+  phrase: ['Preciso de um café', 'Preciso de café', 'Preciso tomar um café'],
+  response: ['Entendi que vc quer tomar café, né @user_name', 'Café??' ],
   type:'message'
 },
   {
@@ -12,9 +12,9 @@ module.exports.base = [
     type:'message'
 },
   {
-    intentions: 'Ir ao cinema',
-    phrase: ['Quero ver um filme', 'Aqui tem cinema?', 'Quero ir no cinema'],
-    response: ['Hum, saquei que vc quer ir ao cinema'],
+    intentions: 'Greeting',
+    phrase: ['Koe bostinho', 'Fala ai', 'Oi', 'Ola', 'Como vai?', '/start'],
+    response: ['Olá @user_name!'],
     type:'message'
 },
   {
@@ -23,24 +23,7 @@ module.exports.base = [
     response: ['Bora lanchar?'],
     type:'message'
 },
-  {
-    intentions: 'Tomar cerveja',
-    phrase: ['Preciso tomar um gelo', 'Sextou', 'Quero beber'],
-    response: ['Bora bebe!'],
-    type:'message'
-},
-  {
-    intentions: 'Tomar café',
-    phrase: ['Quero tomar um café', 'Quero café', 'Quero beber café', 'Tomar café'],
-    response: 'Quero cafééééééééééééé!',
-    type:'message'
-},
-{
-  intentions: 'Tomar café',
-  phrase: ['Quero tomar um café', 'Quero café', 'Quero beber café', 'Tomar café'],
-  response: ['Quero cafééééééééééééé!'],
-  type:'message'
-},
+
 {
     intentions: 'Endpoint',
     phrase: ['teste'],

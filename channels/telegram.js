@@ -6,8 +6,8 @@ var init = (message) => {
   var response = bot(message.text);
   firebase.logProcess(message, response);
 
-  response[0].response.forEach(value => {
-      value = tagUserName(value, message.chat.first_name)
+  response[0].response = response[0].response.map(value => {
+      return tagUserName(value, message.chat.first_name)
   })
 
   return response
