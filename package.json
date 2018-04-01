@@ -7,5 +7,9 @@
     "test": "tests"
   },
   "author": "lesimoes",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "slimbot": "^0.7.12",
+    "telegram-node-bot": "^4.0.5"
+  }
 }
