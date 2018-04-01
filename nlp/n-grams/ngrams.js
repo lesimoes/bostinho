@@ -9,7 +9,7 @@ var init = (text) => {
   exec_grams(text, base)
   response = base.filter( value => {
     if(value.similarity >= _filter)
-    return value
+      return value
   })
   if(response.length != 0)
     return response
@@ -60,6 +60,7 @@ var compareSimilarity = (a, b) => {
     return -1;
   return 0;
 }
+
 
 
 

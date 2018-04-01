@@ -2,31 +2,31 @@ module.exports.base = [
   {
   intentions: 'Comer Pizza',
   phrase: ['Quero comer pizza', 'Quero pizza', 'Comer pizza', 'Onde eu posso comer uma pizza'],
-  response: 'Entendi que vc quer comer pizza, né @user_name',
+  response: ['Entendi que vc quer comer pizza, né @user_name', 'Pizza??', 'Isso é uma pizza?!',   ],
   type:'message'
 },
   {
     intentions: 'Tomar café',
     phrase: ['Quero tomar um café', 'Quero café', 'Quero beber café', 'Tomar café'],
-    response: 'Quero cafééééééééééééé!',
+    response: ['Quero cafééééééééééééé!', 'https://www.naosalvo.com.br/wp-content/uploads/2013/02/CAFE.jpg'],
     type:'message'
 },
   {
     intentions: 'Ir ao cinema',
     phrase: ['Quero ver um filme', 'Aqui tem cinema?', 'Quero ir no cinema'],
-    response: 'Hum, saquei que vc quer ir ao cinema',
+    response: ['Hum, saquei que vc quer ir ao cinema'],
     type:'message'
 },
   {
     intentions: 'Comer um podrão',
     phrase: ['To com fome', 'Quero podrão', 'Partiu lanches'],
-    response: 'Bora lanchar?',
+    response: ['Bora lanchar?'],
     type:'message'
 },
   {
     intentions: 'Tomar cerveja',
     phrase: ['Preciso tomar um gelo', 'Sextou', 'Quero beber'],
-    response: 'Bora bebe!',
+    response: ['Bora bebe!'],
     type:'message'
 },
   {
@@ -38,7 +38,7 @@ module.exports.base = [
 {
   intentions: 'Tomar café',
   phrase: ['Quero tomar um café', 'Quero café', 'Quero beber café', 'Tomar café'],
-  response: 'Quero cafééééééééééééé!',
+  response: ['Quero cafééééééééééééé!'],
   type:'message'
 },
 {
@@ -52,6 +52,5 @@ module.exports.base = [
 ];
 
 module.exports.default = [
-  {response: 'Não entendi!'},
-  {response: 'Oiii?!'}
+  {response: ['Não entendi!']}
 ]
