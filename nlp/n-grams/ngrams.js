@@ -21,8 +21,8 @@ var exec_grams = (text, base) => {
   let grams = generateGrams(text)
   base.forEach((value) => {
     value.grams = []
-    for(var key in value.intentions){
-      value.grams[key] = generateGrams(value.intentions[key])
+    for(var key in value.phrase){
+      value.grams[key] = generateGrams(value.phrase[key])
     }
   })
   compareGrams(grams, base)

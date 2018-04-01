@@ -1,37 +1,37 @@
 module.exports.base = [
   {
-  phrase: 'Comer Pizza',
-  intentions: ['Quero comer pizza', 'Quero pizza', 'Comer pizza', 'Onde eu posso comer uma pizza'],
+  intentions: 'Comer Pizza',
+  phrase: ['Quero comer pizza', 'Quero pizza', 'Comer pizza', 'Onde eu posso comer uma pizza'],
   response: 'Entendi que vc quer comer pizza, né'
 },
   {
-    phrase: 'Tomar café',
-    intentions: ['Quero tomar um café', 'Quero café', 'Quero beber café', 'Tomar café'],
+    intentions: 'Tomar café',
+    phrase: ['Quero tomar um café', 'Quero café', 'Quero beber café', 'Tomar café'],
     response: 'Quero cafééééééééééééé!'
 },
   {
-    phrase: 'Ir ao cinema',
-    intentions: ['Quero ver um filme', 'Aqui tem cinema?', 'Quero ir no cinema'],
+    intentions: 'Ir ao cinema',
+    phrase: ['Quero ver um filme', 'Aqui tem cinema?', 'Quero ir no cinema'],
     response: 'Hum, saquei que vc quer ir ao cinema'
 },
   {
-    phrase: 'Comer um podrão',
-    intentions: ['To com fome', 'Quero podrão', 'Partiu lanches'],
+    intentions: 'Comer um podrão',
+    phrase: ['To com fome', 'Quero podrão', 'Partiu lanches'],
     response: 'Bora lanchar?'
 },
   {
-    phrase: 'Tomar cerveja',
-    intentions: ['Preciso tomar um gelo', 'Sextou', 'Quero beber'],
+    intentions: 'Tomar cerveja',
+    phrase: ['Preciso tomar um gelo', 'Sextou', 'Quero beber'],
     response: 'Bora bebe!'
 },
   {
-    phrase: 'Tomar café',
-    intentions: ['Quero tomar um café', 'Quero café', 'Quero beber café', 'Tomar café'],
+    intentions: 'Tomar café',
+    phrase: ['Quero tomar um café', 'Quero café', 'Quero beber café', 'Tomar café'],
     response: 'Quero cafééééééééééééé!'
 },
   {
-    phrase: 'Tomar café',
-    intentions: ['Quero tomar um café', 'Quero café', 'Quero beber café', 'Tomar café'],
+    intentions: 'Tomar café',
+    phrase: ['Quero tomar um café', 'Quero café', 'Quero beber café', 'Tomar café'],
     response: 'Quero cafééééééééééééé!'
 }
 
