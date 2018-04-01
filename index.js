@@ -1,5 +1,4 @@
-var bot = require('./nlp/n-grams/ngrams')
-const text = 'Queru piza'
+const bot = require('./nlp/n-grams/ngrams')
 
-var response = bot(text)
+var response = bot('quero tomar cafe');
 console.log(response[0].response);

@@ -3,11 +3,13 @@ var answer = require('../../database/base').default;
 
 const _filter = 0.5;
 
-var init = function(text){
-  grams(text)
+
+var init = (text) => {
+
+  exec_grams(text, base)
   response = base.filter( value => {
     if(value.similarity >= _filter)
-      return value
+    return value
   })
   if(response.length != 0)
     return response
@@ -15,30 +17,30 @@ var init = function(text){
     return answer
 }
 
-var grams = function(text){
-  grams = generateGrams(text)
+var exec_grams = (text, base) => {
+  let grams = generateGrams(text)
   base.forEach((value) => {
+    value.grams = []
     for(var key in value.intentions){
-      value.intentions[key] = generateGrams(value.intentions[key])
+      value.grams[key] = generateGrams(value.intentions[key])
     }
   })
   compareGrams(grams, base)
 }
 
-var generateGrams = function(text){
-  text = text.toLowerCase();
-  return text.match(/[\s\S]{1,3}/g) || []
-}
+var generateGrams = (text) => text.toLowerCase().match(/[\s\S]{1,3}/g) || [];
 
-var compareGrams = function(grams, base){
+
+var compareGrams = (grams, base) => {
   base.forEach( value => {
-    value.similarity = value.intentions
+    value.similarity = value.grams
     .map(intent => precision(intent, grams))
     .reduce(maxValue, -Infinity)
   })
+  base.sort(compareSimilarity);
 }
 
-var precision = function(grams, text){
+var precision = (grams, text) => {
   let cont = 0;
   for(var i in text){
     for(var x in grams){
@@ -51,6 +53,13 @@ var precision = function(grams, text){
 
 var maxValue = ( max, cur ) => Math.max( max, cur );
 
+var compareSimilarity = (a, b) => {
+  if (a.similarity < b.similarity)
+    return 1;
+  if (a.similarity > b.similarity)
+    return -1;
+  return 0;
+}
 
 
 
