@@ -14,7 +14,7 @@ Uma engine para chatbots feita com base no algoritmo adaptado do n-grams.
 ### Executar
 
 
-node index.js
+node app.js
 
 
 ### Info
