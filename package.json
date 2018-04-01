@@ -9,6 +9,7 @@
   "author": "lesimoes",
   "license": "MIT",
   "dependencies": {
+    "firebase": "^4.12.1",
     "slimbot": "^0.7.12",
     "telegram-node-bot": "^4.0.5"
   }

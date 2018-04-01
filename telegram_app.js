@@ -1,4 +1,4 @@
-const TELEGRAM_TOKEN = require('./_tokens.js').telegram;
+const TELEGRAM_TOKEN = require('./_tokens').telegram;
 const Slimbot = require('slimbot');
 const slimbot = new Slimbot(TELEGRAM_TOKEN);
 const telegram = require('./channels/telegram');
