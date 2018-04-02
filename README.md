@@ -3,36 +3,21 @@
 ![bostinho pic](https://media.giphy.com/media/l0MYSMV95h0NY6L1m/giphy.gif)
 
 
-
-
-
-
-
 Uma engine para chatbots feita com base no algoritmo adaptado do n-grams.
 
 
 ### Executar
-
-
 node app.js
 
 
 ### Info
+Em um cenário onde a base de conhecimento é pequena e o usuário pode cometer desvios de grafia, em relação a extração de intenções do texto, o Bostinho apresenta resultados melhores que o DialogFlow. Veja o caso de teste para a intenção "Preciso café"
 
-1- A database é um módulo e em breve irei implementar um banco noSQL.
+Resultdo do Bostinho
+![bostinho scenario](https://i.imgur.com/Zll3IQb.gif)
+Resultado do DialogFlow
+![dialog flow scenario](https://i.imgur.com/XZ8XsIc.gif)
 
-2- A const \_filter é o nível de precisão da engine, podendo variar de 0.0 a 1.0 (sendo 1.0 = 100%).
-
-3- O atributo intentions são as frases da base de conhecimento do bot.
-
-4- A var default são opções de resposta caso o bot não identifique nenhuma intenção.
-
-
-### Como contribuir?
-
-1- Sugestões podem ser enviadas através de issues.
-
-2- Para contribuir com o códio bastar criar um novo branch e deixa-lo lá.
 
 
 
