@@ -18,19 +18,11 @@ module.exports.base = [
     type:'message'
 },
   {
-    intentions: 'Comer um podrão',
-    phrase: ['To com fome', 'Quero podrão', 'Partiu lanches'],
-    response: ['Bora lanchar?'],
-    type:'message'
-},
-
-{
-    intentions: 'Endpoint',
-    phrase: ['teste'],
-    response: 'https://http2.mlstatic.com/camiseta-emoji-coco-emoticon-whatsapp-cocozinho-camisa-blusa-D_NQ_NP_658426-MLB26015906808_092017-F.jpg',
+    intentions: 'Quero imagens',
+    phrase: ['Qual seu personagem favorito de star wars', 'Me fala um personagem de star wars', 'De quem vc gosta em star wars'],
+    response: ['https://swapi.co/api/people/@start_wars_person/?format=json'],
     type:'api'
 },
-
 
 ];
 

@@ -1,11 +1,13 @@
 var base = require('../../database/base').base;
 var answer = require('../../database/base').default;
+var reload = require('require-reload')(require)
 
 const _filter = 0.5;
 
 
 var init = (text) => {
 
+  var base = reload('../../database/base').base;
   exec_grams(text, base)
   response = base.filter( value => {
     if(value.similarity >= _filter)
@@ -60,8 +62,6 @@ var compareSimilarity = (a, b) => {
     return -1;
   return 0;
 }
-
-
 
 
 module.exports = init;

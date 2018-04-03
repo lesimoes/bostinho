@@ -10,6 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "firebase": "^4.12.1",
+    "request": "^2.85.0",
+    "require-reload": "^0.2.2",
     "slimbot": "^0.7.12",
     "telegram-node-bot": "^4.0.5"
   }
