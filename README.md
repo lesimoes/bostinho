@@ -3,12 +3,15 @@
 ![bostinho pic](https://media.giphy.com/media/l0MYSMV95h0NY6L1m/giphy.gif)
 
 
-Uma engine para chatbots feita com base no algoritmo adaptado do n-grams.
-
+### Instalar
+npm install bostinho
 
 ### Executar
 node app.js
 
+### Sobre
+
+Bostinho é uma API para chatbots capaz de extrair intenções de textos. 
 
 ### Info
 Em um cenário onde a base de conhecimento é pequena e o usuário pode cometer desvios de grafia, em relação a extração de intenções do texto, o Bostinho apresenta resultados melhores que o DialogFlow. Veja o caso de teste para a intenção "Preciso café"
