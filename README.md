@@ -4,10 +4,24 @@
 
 
 ### Instalar
-npm install bostinho
+`npm install bostinho`
 
-### Executar
-node app.js
+### Exemplo de uso
+```javascript
+var stdin = process.openStdin();
+var Bostinho = require('bostinho');
+
+
+stdin.addListener("data", function(d) {
+
+  var bostinho = new Bostinho();
+  var response = bostinho.sendMsg(d.toString().trim())
+  response[0].response.forEach(value => {
+    console.log(value)
+  })
+
+});
+```
 
 ### Sobre
 
