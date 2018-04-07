@@ -50,7 +50,7 @@ phrase: Frases que remetem áquela intenção.
 response: Resposta que o bot irá retornar caso áquela intenção seja identificada.
 type: Tipo de resposta do bot.
 
-## Response tags
+#### Response tags
 É possível substituir os responses tags por outro texto, por exemplo, no exemplo do telegram a tag @user_name será substituida pelo nome do usuário no telegram.
 
 
