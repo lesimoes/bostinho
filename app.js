@@ -1,5 +1,4 @@
 var stdin = process.openStdin();
-var bot = require('./nlp/n-grams/ngrams')
 var Bostinho = require('./model/Bostinho.js');
 
 
