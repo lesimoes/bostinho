@@ -1,13 +1,13 @@
-var base = require('../../database/base').base;
-var answer = require('../../database/base').default;
 var reload = require('require-reload')(require)
 
-const _filter = 0.5;
-
+var _filter = 0.5;
+var path_database = '../../database/base';
 
 var init = (text) => {
 
-  var base = reload('../../database/base').base;
+  var base = reload(path_database).base;
+  var answer = reload(path_database).default
+
   exec_grams(text, base)
   response = base.filter( value => {
     if(value.similarity >= _filter)
