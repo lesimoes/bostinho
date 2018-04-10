@@ -1,7 +1,8 @@
 class Bostinho {
 
-  constructor(){
+  constructor(filter = 0.5){
     this.engine = require('../nlp/n-grams/ngrams')
+    this.engine.setFilter(filter)
     this.setDatabse('../../database/base');
   }
 

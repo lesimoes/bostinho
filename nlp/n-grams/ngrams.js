@@ -1,10 +1,9 @@
 var reload = require('require-reload')(require)
 
-var _filter = 0.5;
+var _filter;
 var path_database = '../../database/base';
 
 var init = (text) => {
-
   var base = reload(path_database).base;
   var answer = reload(path_database).default
 
@@ -56,12 +55,13 @@ var precision = (grams, text) => {
 var maxValue = ( max, cur ) => Math.max( max, cur );
 
 var compareSimilarity = (a, b) => {
-  if (a.similarity < b.similarity)
-    return 1;
-  if (a.similarity > b.similarity)
-    return -1;
+  if (a.similarity < b.similarity) return 1;
+  if (a.similarity > b.similarity) return -1;
   return 0;
 }
 
+var setFilter = (filter) => { _filter = filter}
+
 
 module.exports = init;
+module.exports.setFilter = setFilter;
