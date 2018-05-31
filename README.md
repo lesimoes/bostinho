@@ -1,5 +1,9 @@
 ## :poop: Bostinho (Seu bot amiguinho)
+
+![npm](https://img.shields.io/npm/l/express.svg)
 [![Build Status](https://travis-ci.org/lesimoes/bostinho.svg?branch=master)](https://travis-ci.org/lesimoes/bostinho)
+[![Coverage Status](https://coveralls.io/repos/github/lesimoes/bostinho/badge.svg?branch=master)](https://coveralls.io/github/lesimoes/bostinho?branch=master)
+
 
 ![bostinho pic](https://media.giphy.com/media/l0MYSMV95h0NY6L1m/giphy.gif)
 
