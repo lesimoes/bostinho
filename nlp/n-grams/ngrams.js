@@ -1,12 +1,12 @@
-var reload = require('require-reload')(require)
+const reload = require('require-reload')(require)
 
-var _filter = 0.5;
-var path_database = '../../database/base';
+let _filter = 0.5;
+let path_database = '../../database/base';
 
-var init = (text) => {
+let init = (text) => {
 
-  var base = reload(path_database).base;
-  var answer = reload(path_database).default
+  let base = reload(path_database).base;
+  let answer = reload(path_database).default
 
   exec_grams(text, base)
   response = base.filter( value => {
@@ -19,7 +19,7 @@ var init = (text) => {
     return answer
 }
 
-var exec_grams = (text, base) => {
+let exec_grams = (text, base) => {
   let grams = generateGrams(text)
   base.forEach((value) => {
     value.grams = []
@@ -30,10 +30,10 @@ var exec_grams = (text, base) => {
   compareGrams(grams, base)
 }
 
-var generateGrams = (text) => text.toLowerCase().match(/[\s\S]{1,3}/g) || [];
+let generateGrams = (text) => text.toLowerCase().match(/[\s\S]{1,3}/g) || [];
 
 
-var compareGrams = (grams, base) => {
+let compareGrams = (grams, base) => {
   base.forEach( value => {
     value.similarity = value.grams
     .map(intent => precision(intent, grams))
@@ -42,24 +42,22 @@ var compareGrams = (grams, base) => {
   base.sort(compareSimilarity);
 }
 
-var precision = (grams, text) => {
+let precision = (grams, text) => {
   let cont = 0;
-  for(var i in text){
-    for(var x in grams){
+  for(let i in text){
+    for(let x in grams){
       if(text[i] == grams[x])
-      cont ++
+        cont ++
     }
   }
   return cont / text.length
 }
 
-var maxValue = ( max, cur ) => Math.max( max, cur );
+let maxValue = ( max, cur ) => Math.max( max, cur );
 
-var compareSimilarity = (a, b) => {
-  if (a.similarity < b.similarity)
-    return 1;
-  if (a.similarity > b.similarity)
-    return -1;
+let compareSimilarity = (a, b) => {
+  if (a.similarity < b.similarity) return 1;
+  if (a.similarity > b.similarity) return -1;
   return 0;
 }
 

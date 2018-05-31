@@ -4,12 +4,11 @@ const slimbot = new Slimbot(TELEGRAM_TOKEN);
 const telegram = require('./channels/telegram');
 
 slimbot.on('message', message => {
-  telegram(message, function(response){
-    response[0].response.forEach(value => {
-      slimbot.sendMessage(message.chat.id, value);
-    })
-  });
-
+  telegram(message).then((res) => {
+      res[0].response.forEach(value => {
+        slimbot.sendMessage(message.chat.id, value);
+      })
+  })
 });
 
 

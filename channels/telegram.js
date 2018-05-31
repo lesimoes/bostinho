@@ -1,46 +1,36 @@
-var bot = require('../nlp/n-grams/ngrams')
+let bot = require('../nlp/n-grams/ngrams')
 const firebase = require('../database/firebase_app');
 const request = require('request');
 
-var init = (message, callback) => {
+let init = async (message) => {
 
-  var response = bot(message.text);
+  let response = bot(message.text);
   firebase.logProcess(message, response);
 
   response[0].response = response[0].response.map(value => {
       return tagUserName(tagStarPerson(value), message.chat.first_name)
   })
-
   if(response[0].type === 'api'){
-    typeMessage(response, function(result){
-        callback(result)
-    })
+    typeMessage(response).then((res) => {return res })
   }
   else
-    callback(response)
-
+    return response
 }
 
-var tagUserName = (text, name) => text.replace('@user_name', name);
+let tagUserName = (text, name) => text.replace('@user_name', name);
 
-var tagStarPerson = (text) => {
+let tagStarPerson = (text) => {
   let person = Math.floor(Math.random() * 10 + 1)
   return text.replace('@start_wars_person', person);
 }
 
-var typeMessage = function(message, callback){
-  //console.log(message[0].response[1])
+let typeMessage = async (message) => {
   request({url: message[0].response[0], method: 'GET'}, (err, res, body) => {
     if(body){
       message[0].response[0] = JSON.parse(body).name
-      callback(message)
+      return message;
     }
-
   })
-
 }
-
-
-
 
 module.exports = init;
