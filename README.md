@@ -1,4 +1,5 @@
 ## :poop: Bostinho (Seu bot amiguinho)
+[![Build Status](https://travis-ci.org/lesimoes/bostinho.svg?branch=master)](https://travis-ci.org/lesimoes/bostinho)
 
 ![bostinho pic](https://media.giphy.com/media/l0MYSMV95h0NY6L1m/giphy.gif)
 
