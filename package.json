@@ -18,16 +18,16 @@
   ],
   "main": "./model/Bostinho.js",
   "scripts": {
-    "test": "tests"
+    "test": "mocha"
   },
   "author": {
     "name": "Leandro Simões",
     "email": "lesimoes0@gmail.com"
   },
   "repository": {
-   "type": "git",
-   "url": "git+https://github.com/lesimoes/bostinho"
- },
+    "type": "git",
+    "url": "git+https://github.com/lesimoes/bostinho"
+  },
   "license": "MIT",
   "dependencies": {
     "firebase": "^4.12.1",
@@ -35,5 +35,9 @@
     "require-reload": "^0.2.2",
     "slimbot": "^0.7.12",
     "telegram-node-bot": "^4.0.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
   }
 }

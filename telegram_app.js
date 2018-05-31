@@ -11,5 +11,4 @@ slimbot.on('message', message => {
   })
 });
 
-
 slimbot.startPolling();
